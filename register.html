@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New Registration | Kings Mate Chess Academy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  background:#111;
+  font-family:Arial;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+.box{
+  background:#fff;
+  padding:30px;
+  width:400px;
+  border-radius:10px;
+}
+h2{
+  text-align:center;
+  color:#ff8c00;
+}
+input, select{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+button{
+  width:100%;
+  padding:14px;
+  background:#ff9800;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{
+  background:#ffa726;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>New Student Registration</h2>
+
+  <input id="name" placeholder="Student Name*" required>
+  <input id="phone" placeholder="WhatsApp Number*" required>
+  <input id="email" placeholder="Email">
+  <input id="city" placeholder="City*" required>
+
+  <select id="level">
+    <option>Beginner</option>
+    <option>Intermediate</option>
+    <option>Advanced</option>
+  </select>
+
+  <button onclick="register()">Register</button>
+</div>
+
+<script>
+function register(){
+  if(!name.value || !phone.value || !city.value){
+    alert("Please fill all required fields");
+    return;
+  }
+
+  const student = {
+    name: name.value,
+    phone: phone.value,
+    email: email.value,
+    city: city.value,
+    level: level.value
+  };
+
+  let students = JSON.parse(localStorage.getItem("students")) || [];
+  students.push(student);
+  localStorage.setItem("students", JSON.stringify(students));
+
+  const message =
+`New Student Registration ♟️
+
+👤 Name: ${student.name}
+📱 Phone: ${student.phone}
+📧 Email: ${student.email}
+🏙 City: ${student.city}
+♟ Level: ${student.level}
+
+Kings Mate Chess Academy`;
+
+  window.open(
+    "https://wa.me/919894622286?text=" + encodeURIComponent(message),
+    "_blank"
+  );
+
+  alert("Registration saved successfully!");
+}
+</script>
+
+</body>
+</html>

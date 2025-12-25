@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us | Kings Mate Chess Academy</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ---------- PAGE RESET ---------- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: #000;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-box img {
+      height: 45px;
+      width: auto;
+    }
+
+    .logo-box span {
+      color: #ffa500;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #ffa500;
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    .about-hero {
+      position: relative;
+      min-height: 70vh;
+      background: 
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("images/chess-bg.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 60px 80px;
+    }
+
+    .about-content {
+      max-width: 900px;
+    }
+
+    .about-content h1 {
+      font-size: 42px;
+      color: #ffa500;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #e0e0e0;
+      margin-bottom: 18px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      border-top: 1px solid #222;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .about-hero {
+        padding: 40px 25px;
+      }
+
+      .about-content h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-box">
+      <img src="images/logo.png" alt="Kings Mate Chess Academy Logo">
+      <span>Kings Mate Chess Academy</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-hero">
+    <div class="about-content">
+      <h1>About Kings Mate Chess Academy</h1>
+
+      <p>
+        We are one of India’s premier online chess academies, dedicated to nurturing
+        young minds with confidence, discipline, and strategic thinking.
+      </p>
+
+      <p>
+        At Kings Mate Chess Academy, we combine structured curriculum, expert coaching,
+        and interactive sessions to ensure every student receives personalized attention.
+      </p>
+
+      <p>
+        Our programs cater to all levels — from absolute beginners to advanced players —
+        helping students build strong fundamentals, tactical sharpness, and tournament readiness.
+      </p>
+
+      <p>
+        Chess is more than a game to us — it’s a tool to build focus, patience, problem-solving,
+        and lifelong confidence.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Kings Mate Chess Academy. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

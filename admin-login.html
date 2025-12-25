@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<style>
+body{font-family:Arial;margin:0;background:#f4f4f4}
+header{background:#000;color:#ffa500;padding:20px;font-size:24px}
+.container{padding:30px}
+
+table{width:100%;border-collapse:collapse;margin-top:20px}
+th,td{border:1px solid #ddd;padding:12px;text-align:left}
+th{background:#ffa500;color:#000}
+
+.card-row{display:flex;gap:20px}
+.card{background:#fff;padding:20px;border-radius:10px;width:300px}
+</style>
+</head>
+
+<body>
+
+<header>Admin Dashboard</header>
+
+<div class="container">
+  <div class="card-row">
+    <div class="card">
+      <h3>Total Students</h3>
+      <p id="total">0</p>
+    </div>
+  </div>
+
+  <h2>Registered Students</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Level</th>
+        <th>Mode</th>
+      </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+  </table>
+</div>
+
+<script>
+const students = JSON.parse(localStorage.getItem("students")) || [];
+document.getElementById("total").innerText = students.length;
+
+const table = document.getElementById("studentTable");
+students.forEach(s=>{
+  const row = `
+    <tr>
+      <td>${s.name}</td>
+      <td>${s.phone}</td>
+      <td>${s.email}</td>
+      <td>${s.city}</td>
+      <td>${s.level}</td>
+      <td>${s.mode}</td>
+    </tr>`;
+  table.innerHTML += row;
+});
+</script>
+
+</body>
+</html>
