@@ -1,0 +1,30 @@
+# Node / React
+node_modules/
+**/node_modules/
+build/
+dist/
+.cache/
+coverage/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+.env.*
+**/.env
+**/.env.*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# CRA
+*.local
+
+# Misc
+*.tmp
+*.swp
